@@ -3,7 +3,7 @@ var urlsToCache = [
   '/',
   '/css/style.css',
   '/js/main.js',
-  'image/minion.svg'
+  'images/minion.svg'
 ];
 
 self.addEventListener('install', function(event) {
