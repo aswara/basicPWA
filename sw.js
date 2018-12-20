@@ -4,7 +4,6 @@ var urlsToCache = [
   '/css/style.css',
   '/js/main.js',
   'images/minion.svg',
-  'dzikirpagi.html'
 ];
 
 self.addEventListener('install', function(event) {
