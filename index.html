@@ -147,17 +147,11 @@
 
 	<script src="/js/main.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		let swRegistration = null;
-		let isSubscribed = false;
-		//PWA
-		if ('serviceWorker' in navigator && 'PushManager' in window ) {
-			console.log('Service Worker and Push is supported')
+		if ('serviceWorker' in navigator ) {
 		  window.addEventListener('load', function() {
 		    navigator.serviceWorker.register('/sw.js').then(function(registration) {
 		      // Registration was successful
-		      console.log('ServiceWorker registration successful with scope: ', registration);
-		      swRegistration = registration;
-		      initialiseUI()
+		      console.log('ServiceWorker registration successful with scope: ', registration.scope);
 		    }).catch(function(err) {
 		      // registration failed :(
 		      console.log('ServiceWorker registration failed: ', err);
