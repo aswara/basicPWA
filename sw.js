@@ -1,9 +1,9 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
   '/',
   '/css/style.css',
   '/js/main.js',
-  'images/minion.svg',
+  '/images/minion.svg',
 ];
 
 self.addEventListener('install', function(event) {
@@ -36,7 +36,6 @@ self.addEventListener('fetch', function(event) {
 self.addEventListener('activate', function(event) {
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
-      console.log(cacheNames)
       return Promise.all(
         cacheNames.filter(function(cacheNames){
           return cacheNames != CACHE_NAME
