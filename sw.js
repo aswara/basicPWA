@@ -42,7 +42,7 @@ self.addEventListener('activate', function(event) {
       return Promise.all(
         cacheNames.filter(function(cacheNames){
           return cacheNames != CACHE_NAME
-        }).map(function(cacheNames){
+        }).map(function(cacheName){
           return caches.delete(cacheName)
         })
       );
