@@ -1,9 +1,10 @@
-var CACHE_NAME = 'my-site-cache-v1';
+var CACHE_NAME = 'my-site-cache-v2';
 var urlsToCache = [
   '/',
+  '/index.html',
   '/css/style.css',
   '/js/main.js',
-  'images/minion.svg'
+  '/images/minion.svg'
 ];
 
 self.addEventListener('install', function(event) {
